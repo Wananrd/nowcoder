@@ -14,8 +14,8 @@ public class DiscussPost {
     private String userId;
     private String title;
     private String content;
-    private Short type;
-    private Short status;
+    private Integer type;
+    private Integer status;
     private LocalDateTime createTime;
     private Integer commentCount;
     private Double score;

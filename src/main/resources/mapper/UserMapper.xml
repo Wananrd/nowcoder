@@ -8,4 +8,23 @@
             <if test="id != null"> and id = #{id}</if>
         </where>
     </select>
+
+    <select id="selectByUserName" resultType="com.nowcoder.pojo.User">
+        select * from user
+        <where>
+            <if test="username != null"> and username = #{username}</if>
+        </where>
+    </select>
+    <select id="selectByEmail" resultType="com.nowcoder.pojo.User">
+        select * from user
+        <where>
+            <if test="email != null"> and email = #{email}</if>
+        </where>
+    </select>
+
+    <insert id="insert" parameterType="com.nowcoder.pojo.User" useGeneratedKeys="true" keyProperty="id">
+        insert into user(username, password, salt, email, type, status, activation_code, header_url, create_time)
+        values (#{username}, #{password}, #{salt}, #{email}, #{type}, #{status}, #{activationCode}, #{headerUrl}, #{createTime})
+    </insert>
+
 </mapper>

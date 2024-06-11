@@ -15,8 +15,8 @@ public class User {
     private String password;
     private String salt;
     private String email;
-    private Short type;
-    private Short status;
+    private Integer type;
+    private Integer status;
     private String activationCode;
     private String headerUrl;
     private LocalDateTime createTime;

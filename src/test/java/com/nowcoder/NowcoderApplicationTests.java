@@ -26,5 +26,4 @@ class NowcoderApplicationTests {
         Integer cnt = discussPostMapper.selectDiscussPostRows(null);
         System.out.println(cnt);
     }
-
 }
